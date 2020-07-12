@@ -1,0 +1,20 @@
+/* Global variables */
+
+:root {
+  --font-color: #495057;
+  --heading-color: #343a40;
+  --dark-font-color: #212529;
+  --medium-font-color: #60656c;
+  --light-font-color: #868e96;
+  --light-background: #f1f3f5;
+  --border: #d6d9de;
+  --link-color: #5183f5;
+
+  /* 顶部导航高度 */
+  --nav-height: 3.75rem;
+
+  /* 字体 */
+  --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto",
+    Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
