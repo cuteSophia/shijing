@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Posts from '../components/posts'
+
 import ImgBg from "../../content/assets/bing2.jpeg"
 
 export default ({ data, location }) => {
@@ -18,36 +19,11 @@ export default ({ data, location }) => {
         <img src={ImgBg} alt="" />
         <div>
           <h1>shi jing</h1>
-          <h2>china software engineer with react.js, node.js and graphql</h2>
+          <h2>china web developer with react.js, notes on life and software</h2>
         </div>
       </div>
       <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+      <Posts data={posts} />
     </Layout>
   )
 }

@@ -32,16 +32,31 @@ a {
   box-shadow: 0 0 0 0 currentColor;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--font-family);
+}
+
 main {
   background: powderblue;
   margin-top: var(--nav-height);
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background: pink;
+  /* background: pink; */
 }
 
 .flex {
@@ -139,14 +154,22 @@ main {
 /* Footer */
 
 .footer {
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid #f2f4f6;
   padding: 2rem;
   color: var(--font-color);
   font-size: 0.875rem;
 }
 
+.footer a:hover {
+  text-decoration: underline;
+}
+
 .footer .copyright {
   color: var(--font-color);
+}
+
+.footer .copyright a {
+  color: #4078c0;
 }
 
 .footer nav {
@@ -156,10 +179,6 @@ main {
 .footer nav a {
   color: var(--font-color);
   margin: 0 1rem;
-}
-
-.footer nav a:hover {
-  text-decoration: underline;
 }
 
 /* 首页第一屏 */
@@ -182,7 +201,7 @@ main {
 .impression div {
   position: absolute;
   top: 50%;
-  transform: translateY(-52%);
+  transform: translateY(-50%);
   width: 100%;
   text-align: center;
   color: white;
@@ -218,4 +237,75 @@ main {
   letter-spacing: 3.5px;
   text-transform: uppercase;
   opacity: 0.7;
+}
+
+/* Bio */
+
+.bio {
+  text-align: center;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 5rem 1.25rem;
+}
+
+.bio h2 {
+  padding: 0 0 0.625rem;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bio h3 {
+  padding: 0 0 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 2.5rem;
+}
+
+.bio p {
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+}
+
+/* Posts */
+
+.posts {
+  padding: 0 1rem;
+}
+
+.post {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+}
+
+.post:hover {
+  box-shadow: 0 3px 13px rgba(100, 110, 140, 0.1),
+    3px 0 13px rgba(100, 110, 140, 0.1);
+}
+
+.post h3 {
+  font-family: var(--font-family);
+  font-size: 1.375rem;
+  color: var(--dark-font-color);
+}
+
+.post time {
+  font-size: 0.8rem;
+  color: var(--light-font-color);
+}
+
+.post section {
+  margin-top: 0.5rem;
+}
+
+.post p {
+  color: var(--font-color);
+  margin-bottom: 0;
 }

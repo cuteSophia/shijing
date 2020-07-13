@@ -6,17 +6,17 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
-const Bio = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 120, height: 120) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -37,12 +37,9 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <div className="bio">
+      <h2>about me</h2>
+      <h3>get to know me before you dive into my content</h3>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -57,8 +54,14 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
+        Hey! My name is <Link to="/me">{author.name}</Link>. I'm a web engineer
+        dedicated to learning and teaching JavaScript for client-server
+        architectures. After obtaining my Master's Degree in computer science, I
+        gained experience from the startup world, where I used JavaScript
+        intensively during both my professional life and spare time. Eventually
+        it led me to teach others about these topics and to offer online courses
+        and on-site consulting for companies. I am happy to welcome you on my
+        website. {author.summary}{" "}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
         </a>
@@ -66,5 +69,3 @@ const Bio = () => {
     </div>
   )
 }
-
-export default Bio
