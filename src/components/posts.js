@@ -7,8 +7,8 @@ export default ({ data }) => {
       {data.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <Link to={node.fields.slug}>
-            <article key={node.fields.slug} className="post">
+          <Link to={node.fields.slug} key={node.fields.slug}>
+            <article className="post">
               <h3>{title}</h3>
               <time>{node.frontmatter.date}</time>
               <section>
