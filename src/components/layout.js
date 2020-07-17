@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import Nav from "./nav"
+import Header from "./header"
 import Footer from "./footer"
 
 export default ({ location, children }) => {
@@ -12,7 +12,7 @@ export default ({ location, children }) => {
 
   return (
     <>
-      <Nav location={location} />
+      <Header location={location} />
       {pathname === rootPath ? (
         <>{children}</>
       ) : (

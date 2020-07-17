@@ -38,7 +38,6 @@ export default ({ location }) => {
       <div className="list">
         <Link to="/about">ABOUT</Link>
         <Link to="/blog">BLOG</Link>
-        <Link to="/hello-world/">GUIDES</Link>
       </div>
     </nav>
   )

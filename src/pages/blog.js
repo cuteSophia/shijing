@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from '../components/seo'
 import Posts from "../components/posts"
 
 export default ({ data, location }) => {
@@ -8,6 +9,7 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location}>
+      <SEO title="Blog" />
       <Posts data={posts} />
     </Layout>
   )
