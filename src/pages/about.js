@@ -83,11 +83,9 @@ export default ({ location }) => {
       <SEO title="About Me" />
       <section>
         <h2 className="about-title">About Me</h2>
-        <p style={{width: '80%', margin: '0 auto 5rem', textAlign: 'center'}}>
-          I try to keep busy while having fun and testing my limits. Between
-          school, side projects, freelancing, and interning, I've gained
-          valuable exposure to a wide variety of interesting technologies and
-          problems.
+        <p style={{ width: "80%", margin: "0 auto 5rem", textAlign: "center" }}>
+          Hey there, Nice to meet you. My name is ShiJing. I'm a frontend focused
+          Web Engineer living in Shanghai. I write code and think about stuff.
         </p>
       </section>
       <section>
